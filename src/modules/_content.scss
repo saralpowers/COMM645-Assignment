@@ -1,0 +1,56 @@
+#content {
+    width: 96%;
+    margin: 0 2%;
+    float: none;
+    @include break(767px) {
+        width: 46%;
+        margin: 0 2%;
+    }
+    @include break(959px) {
+        width: 940px;
+        margin: 20px auto;
+    }
+    h3 {
+        color: $gray-things;
+        font-size: 2em;
+        font-weight: 400;
+    }
+
+    #products {
+        @include break(959px) {
+        //add math operation here to take pixel values and convert them to percentages for this breakpoint
+        width: 460px / 940px * 100%;
+        float: left;
+        }
+
+        div {
+            float: left;
+            margin-right: 20px;
+            height: 170px;
+            width: 170px;
+            
+            &.product1 {
+                @include boxImage('#{$assetPath}/vprospect.png', no-repeat);
+                //background:url(#{$assetPath}/vprospect.png) no-repeat;
+            }
+          
+            &.product2 {
+                @include boxImage('#{$assetPath}/vconvert.png', no-repeat);
+                //background:url(#{$assetPath}/vconvert.png) no-repeat;
+            }
+        }
+        article {
+            margin-bottom: 40px;
+        }
+        h4 {
+            line-height: 1em;
+        }
+    }
+
+    #testimonials {
+        @include break(959px) {
+        width: 460px / 940px * 100%;
+        float: right;
+        }
+    }
+}

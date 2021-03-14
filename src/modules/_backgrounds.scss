@@ -1,0 +1,99 @@
+
+figure {
+    margin: 0;
+    @include boxImage('#{$assetPath}/logo.png', no-repeat);
+    //background: url(#{$assetPath}/logo.png) no-repeat;
+    background-size: contain;
+    height: 100px;
+    @include break (767px) {
+        width: inherit;
+        height: 140px;
+        float: none;
+        background-position: center;
+    }
+    @include break(959px) {
+        width: 400px;
+        height: 190px;
+        background-position: 0 50px;
+        float: left;
+        display: block; 
+    }
+}
+
+header {
+    width: inherit;
+    clear: both;
+    text-align: center;
+    padding-top: 40px;
+
+    div {
+    @include boxImage('#{$assetPath}/devices.png', no-repeat);
+    //background: url(#{$assetPath}/devices.png) no-repeat;
+    background-size: 100%;
+    max-width: 100%;
+    height: 300px;
+    margin-bottom: 0px;
+    @include break(959px) {
+        height: 600px;
+    }
+
+    }
+    h1 {
+        font-size: 1.5em;
+        padding-top: 30px;
+        color: $orange-text;
+        font-weight: 100;
+        line-height: 0;
+        @include break(459px) {
+            font-size: 2em;
+        }
+        @include break(959px) {
+            font-size: 4em;
+        }
+    }
+    h2 {
+        color: $white;
+        font-weight: 900;
+        font-size: 1em;
+        line-height: 0;
+        margin-bottom: 70px;
+        @include break(459px) {
+            font-size: 2em;
+        }
+        @include break(959px) {
+            font-size: 3em;
+        }
+    }
+    h3 {
+        color: $gray-things;
+        font-weight: 400;
+        font-size: 1em;
+        line-height: 0;
+        margin-bottom: 50px;
+        @include break(459px) {
+            font-size: 1.5em;
+        }
+        @include break(959px) {
+            font-size: 2em;
+        }
+    }
+}
+
+#headline {
+    @include bars(100%, 130px, $orange-text);
+    margin: 0 auto;
+    text-align: center;
+
+     h1 {
+         color: $white;
+         font-size: 2.5em;
+         font-weight: 100;
+         padding-top: 50px;
+        }
+}
+
+.greybar {
+    @include bars(100%, 90px, $light-gray);
+    padding-top: 30px;
+    clear: both;
+}

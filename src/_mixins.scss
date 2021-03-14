@@ -1,0 +1,32 @@
+@mixin boxImage($image, $repeat) {
+    background: url($image) $repeat;
+}
+
+@mixin reset-list {
+    margin-top: 20px;
+    list-style-type: none;
+}
+  
+@mixin horizontal-list {
+    @include reset-list;
+  
+    li {
+        display: inline;
+        font-size: 0.8em;
+        margin-right: 10px;
+    }
+}
+
+@mixin bars($width, $size: 100px, $color) {
+    width: $width;
+    height: $size;
+    color: $color;
+}
+  
+
+@mixin break ($length) {
+    @media (min-width: $length) {
+        @content;
+    }
+}
+
