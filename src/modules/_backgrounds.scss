@@ -80,7 +80,7 @@ header {
 }
 
 #headline {
-    @include bars(100%, 130px, $orange-text);
+    @include bars($orange-text, 100%, 130px);
     margin: 0 auto;
     text-align: center;
 
@@ -93,7 +93,7 @@ header {
 }
 
 .greybar {
-    @include bars(100%, 90px, $light-gray);
+    @include bars($light-gray, 100%, 90px);
     padding-top: 30px;
     clear: both;
 }

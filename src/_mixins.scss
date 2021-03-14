@@ -17,10 +17,10 @@
     }
 }
 
-@mixin bars($width, $size: 100px, $color) {
+@mixin bars($color, $width, $size: 100px) {
+    background: $color;
     width: $width;
     height: $size;
-    color: $color;
 }
   
 
